@@ -28,5 +28,4 @@ function! EncfileBufWriter()
     setlocal nomodified
 endfunction
 
-nnoremap <buffer> <Space>w :call EncfileBufWriter()<cr>
 autocmd BufWriteCmd * :call EncfileBufWriter()
