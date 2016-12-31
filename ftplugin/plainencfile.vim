@@ -10,6 +10,10 @@ if !exists("g:encfile_overwrite")
     let g:encfile_overwrite = ''
 endif
 
+if !exists("g:encfile_format")
+    let g:encfile_format = '.gpg'
+endif
+
 ""
 " Writes the contents to the encrypted file back to HDD
 " Encrypts by default using gpg --output <file> --symmetric --yes -
@@ -19,9 +23,9 @@ function! EncfileUpdate()
 
     " If this is a new file being created
     if !exists("b:encfile_name")
-        let b:encfile_name = input('File name: ') . '.encfile'
-        while b:encfile_name == ".encfile"
-            let b:encfile_name = input('File name: ') . '.encfile'
+        let b:encfile_name = input('File name: ') . g:encfile_format
+        while b:encfile_name == g:encfile_format
+            let b:encfile_name = input('File name: ') . g:encfile_format
         endwhile
     endif
 

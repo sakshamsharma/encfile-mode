@@ -27,7 +27,8 @@ Creating a file is as simple as firing up Vim and running `:EncfileNew`
 ## Saving the file
 As you would expect, simply save the file any way you want to. If you created a new file, it may prompt you for a name.
 
-**NOTE**: If you provide the name as `test`, the final file would be stored as `test.encfile`.
+**NOTE**: If you provide the name as `test`, the final file would be stored as `test.gpg`.
+
 **Warning**: You will not receive a warning about overwriting other files except for the first time, to prevent unnecessary prompts.
 
 # Requirements
