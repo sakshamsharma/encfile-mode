@@ -1,0 +1,8 @@
+encfile-mode.txt*   Safely manipulate encrypted files without leaving a trace
+
+==============================================================================
+INTRODUCTION                                                               *ag*
+
+Safely manipulate encrypted files without leaving a trace.
+
+The rest of the documentation shall come soon.
