@@ -6,7 +6,10 @@ if !exists("g:encfile_encrypt_cmd_end")
     let g:encfile_encrypt_cmd_end = '--symmetric --yes -'
 endif
 
-" Writes the contents to the encrypted file
+""
+" Writes the contents to the encrypted file back to HDD
+" Encrypts by default using gpg --output <file> --symmetric --yes -
+" Is called by default on any write action in this buffer.
 function! EncfileUpdate()
     silent !clear
 
@@ -22,7 +25,9 @@ function! EncfileUpdate()
     execute 'w !cat | ' . g:encfile_encrypt_cmd_start . ' ' . b:encfile_name . ' ' . g:encfile_encrypt_cmd_end
 endfunction
 
-" Wrapped to handle vim states for the buffer on write
+""
+" Wrapper to handle vim states for the buffer on write
+" Used as the default BufWriteCmd handler in Vim for such files.
 function! EncfileBufWriter()
     call EncfileUpdate()
     setlocal nomodified

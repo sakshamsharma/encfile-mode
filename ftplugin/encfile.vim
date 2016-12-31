@@ -6,6 +6,11 @@ if !exists('g:encfile_decrypt_cmd')
     let g:encfile_decrypt_cmd = 'gpg --output - --decrypt'
 endif
 
+""
+" Decrypts the current buffer using the defined commands.
+" Defaults to gpg --output - --decrypt
+" Displays the output in a new Vim buffer
+" Uses FIFO pipes as intermediate storage rather than the HDD.
 function! EncfileDecrypt()
     silent !clear
 
