@@ -21,6 +21,7 @@ function! EncfileNew()
     enew
     setlocal ft=plainencfile
     file encfile_tmp
+    let g:encfile_overwrite = ''
 endfunction
 
 ""

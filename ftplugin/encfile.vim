@@ -33,6 +33,7 @@ function! EncfileDecrypt()
     setlocal ft=plainencfile
 
     let b:encfile_name = b:bufname
+    let g:encfile_overwrite = ' --yes '
 
     normal! ggdG
 

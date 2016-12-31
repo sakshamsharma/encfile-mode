@@ -3,7 +3,11 @@ if !exists("g:encfile_encrypt_cmd_start")
 endif
 
 if !exists("g:encfile_encrypt_cmd_end")
-    let g:encfile_encrypt_cmd_end = '--symmetric --yes -'
+    let g:encfile_encrypt_cmd_end = '--symmetric -'
+endif
+
+if !exists("g:encfile_overwrite")
+    let g:encfile_overwrite = ''
 endif
 
 ""
@@ -22,7 +26,9 @@ function! EncfileUpdate()
     endif
 
     " Output the buffer contents on STDIN to the decryption program
-    execute 'w !cat | ' . g:encfile_encrypt_cmd_start . ' ' . b:encfile_name . ' ' . g:encfile_encrypt_cmd_end
+    execute 'w !cat | ' . g:encfile_encrypt_cmd_start . ' ' . b:encfile_name . ' ' . g:encfile_overwrite . g:encfile_encrypt_cmd_end
+
+    let g:encfile_overwrite = ' --yes '
 endfunction
 
 ""

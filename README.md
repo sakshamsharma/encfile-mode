@@ -30,6 +30,7 @@ Creating a file is as simple as firing up Vim and running `:EncfileNew`
 As you would expect, simply save the file any way you want to. If you created a new file, it may prompt you for a name.
 
 **NOTE**: If you provide the name as `test`, the final file would be stored as `test.encfile`.
+**Warning**: You will not receive a warning about overwriting other files except for the first time, to prevent unnecessary prompts.
 
 # Requirements
 The default settings use symmetric encryption using GnuPG. And thus, you should have a recent version of `gpg` installed.
