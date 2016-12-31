@@ -16,8 +16,6 @@ Safely manipulate encrypted files without leaving a trace
 Lets you create, read and save encrypted files as if they were in plaintext.
 What's more, does not store the plaintext on the hard disk EVER, thus preventing anyone from recovering the contents through recovery tools.
 
-**NOTE**: Uses FIFO pipes to store temporary data in RAM.
-
 # Usage
 ## Creating an encrypted file
 Creating a file is as simple as firing up Vim and running `:EncfileNew`
