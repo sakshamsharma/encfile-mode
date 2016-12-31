@@ -3,10 +3,25 @@ Saksham Sharma                                                  *encfile-mode*
 
 ==============================================================================
 CONTENTS                                               *encfile-mode-contents*
-  1. Commands..........................................|encfile-mode-commands|
+  1. Introduction.........................................|encfile-mode-intro|
+  2. Commands..........................................|encfile-mode-commands|
+
+==============================================================================
+INTRODUCTION                                              *encfile-mode-intro*
+
+encfile-mode is intended for storing important information in encrypted form
+on your machine. It solves two problems:
+  1. Repeatedely having to encrypt and decrypt for editing/viewing purposes.
+  2. Decrypting to hard disk, which leaves traces.
+
+encfile-mode wraps this functionality in a single plugin, which handles
+encrypted files as if they were plain text. Opening .encfile format files and
+saving works as you would expect for plaintext files.
 
 ==============================================================================
 COMMANDS                                               *encfile-mode-commands*
+
+There is a single command, |:EncfileNew|, to let you create an encrypted file.
 
 :EncfileNew                                                      *:EncfileNew*
   Sets the current buffer as a plain-mode encfile buffer. Executing this would

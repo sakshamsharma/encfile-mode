@@ -20,12 +20,11 @@ What's more, does not store the plaintext on the hard disk EVER, thus preventing
 
 # Usage
 ## Creating an encrypted file
-Creating a file is as simple as firing up Vim and running `:call EncfileNew()`
+Creating a file is as simple as firing up Vim and running `:EncfileNew`
 
-You can also explicitly start Vim in encfile mode by providing the extension:
-```
-vim .plainencfile
-```
+**Other ways**
+* `:call EncfileNew()`
+* `vim .plainencfile`
 
 ## Saving the file
 As you would expect, simply save the file any way you want to. If you created a new file, it may prompt you for a name.
