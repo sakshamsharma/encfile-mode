@@ -1,0 +1,5 @@
+{
+  "name": "encfile-mode",
+  "description": "Safely manipulate encrypted files without leaving a trace",
+  "author": "Saksham Sharma"
+}

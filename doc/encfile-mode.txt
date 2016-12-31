@@ -1,8 +1,16 @@
-encfile-mode.txt*   Safely manipulate encrypted files without leaving a trace
+*encfile-mode.txt*	Safely manipulate encrypted files without leaving a trace
+Saksham Sharma                                                  *encfile-mode*
 
 ==============================================================================
-INTRODUCTION                                                               *ag*
+CONTENTS                                               *encfile-mode-contents*
+  1. Commands..........................................|encfile-mode-commands|
 
-Safely manipulate encrypted files without leaving a trace.
+==============================================================================
+COMMANDS                                               *encfile-mode-commands*
 
-The rest of the documentation shall come soon.
+:EncfileNew                                                      *:EncfileNew*
+  Sets the current buffer as a plain-mode encfile buffer. Executing this would
+  hijack the write-file hook to instead save the file in encrypted form.
+
+
+vim:tw=78:ts=8:ft=help:norl:
