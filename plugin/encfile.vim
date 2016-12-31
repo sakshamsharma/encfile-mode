@@ -3,7 +3,7 @@
 " Executing this would hijack the write-file hook to instead save
 " the file in encrypted form.
 function! EncfileNew()
-    enew __Encfile_mode__
+    enew
     setlocal ft=plainencfile
     file encfile_tmp
 endfunction

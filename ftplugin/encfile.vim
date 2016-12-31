@@ -29,12 +29,12 @@ function! EncfileDecrypt()
     call system(dec_sys_cmd)
 
     " Enter new buffer
-    enew __Encfile_Mode__
+    edit
+    setlocal ft=plainencfile
 
     let b:encfile_name = b:bufname
 
     normal! ggdG
-    setlocal ft=plainencfile
 
     call append(0, split(system("cat " . b:pipename), '\v\n'))
 
